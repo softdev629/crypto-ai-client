@@ -17,7 +17,7 @@ const ChatBox = () => {
   const [isAnswered, setIsAnswered] = useState(true); // Answer state
   const chatHistoryRef = useRef(null);
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `ws://localhost:9000/api/chat`
+    `ws://localhost:9000/api/server1/chat`
   ); // Websocket Hook
 
   // Receive Messages
