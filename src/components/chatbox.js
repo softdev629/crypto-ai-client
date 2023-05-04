@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 import useWebSocket, { ReadyState } from "react-use-websocket";
 
 const ChatBox = () => {
@@ -16,8 +17,10 @@ const ChatBox = () => {
   const [prompt, setPrompt] = useState(""); // User Message Input
   const [isAnswered, setIsAnswered] = useState(true); // Answer state
   const chatHistoryRef = useRef(null);
+  const params = useParams();
+
   const { sendMessage, lastMessage, readyState } = useWebSocket(
-    `ws://localhost:9000/api/server1/chat`
+    `ws://localhost:9000/api/server${params.num}/chat`
   ); // Websocket Hook
 
   // Receive Messages
