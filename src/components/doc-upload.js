@@ -14,7 +14,7 @@ const DocUpload = () => {
 
   const draggerProps = {
     maxCount: 1,
-    action: `/api/server2/upload`,
+    action: `/api/server3/upload`,
     onChange(info) {
       const { status } = info.file;
 
