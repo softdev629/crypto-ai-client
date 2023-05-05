@@ -69,7 +69,7 @@ const ChatBox = () => {
       >
         <img
           alt="icon"
-          src={type === "bot" ? "/assets/bot.png" : "/assets/user.png"}
+          src={type === "bot" ? "/assets/img/bot.png" : "/assets/img/user.png"}
           width={35}
           height={35}
         />
@@ -100,7 +100,7 @@ const ChatBox = () => {
           type="submit"
           disabled={readyState !== ReadyState.OPEN}
         >
-          <img width={40} height={40} src="/assets/send.jpg" alt="send" />
+          <img width={40} height={40} src="/assets/img/send.jpg" alt="send" />
         </button>
       </form>
     </div>
