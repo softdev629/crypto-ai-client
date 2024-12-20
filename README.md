@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Crypto Chatbot UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based Chatbot User Interface** designed for cryptocurrency-related tasks. It offers real-time communication, PDF viewing for crypto-related documents (e.g., whitepapers), and a clean design built with **Ant Design**, **PDF.js**, and **WebSocket hooks**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Crypto-Focused Chatbot Interface**: Engage with a chatbot specifically customized for cryptocurrency tasks like price tracking, updates, FAQs, or educational material.
+- **PDF Viewer**: Easily view cryptocurrency whitepapers, reports, or guides using [PDF.js library](https://mozilla.github.io/pdf.js/).
+- **Ant Design UI**: Elegant and intuitive user interface with Ant Design components.
+- **Real-Time Communication**: Real-time message exchange powered by WebSocket hooks.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+1. **Node.js** (v16 or later): Install Node.js from [nodejs.org](https://nodejs.org/).
+2. **Chatbot Backend API**: The chatbot interacts with a backend API. Ensure the backend service handling the crypto-related chatbot data is up and running.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps to set up and test the Crypto Chatbot UI locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone the Repository
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/softdev629/crypto-ai-client.git
+cd crypto-ai-client
+```
 
-### `npm run eject`
+### 2. Install Dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Run the Backend API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ensure the chatbot API backend (which provides cryptocurrency-related answers and functionality) is properly configured and running. Follow the backend repository setup instructions for details.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you're testing locally, ensure your backend listens on `localhost` with the correct ports (e.g., `5000`).
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4. Start the Development Server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once the backend API is running, start the React development server:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Access the project at [http://localhost:3000](http://localhost:3000).
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Folder Structure
 
-### Making a Progressive Web App
+Organized for scalability and ease of development:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+src/
+├── components/          // Reusable React components
+│   ├── chatbox.js         // Handles chatbot UI and message rendering
+│   ├── doc-upload.js       // Handles displaying PDFs like whitepapers
+└── App.js               // Main application entry point
+```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Libraries Used
 
-### Deployment
+| Library                            | Purpose                                      |
+|------------------------------------|----------------------------------------------|
+| [React](https://reactjs.org)       | Core framework for building the application  |
+| [Ant Design](https://ant.design/)  | Prebuilt UI components and styling           |
+| [PDF.js](https://mozilla.github.io/pdf.js/) | Viewing crypto whitepapers or PDFs        |
+| [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) | Real-time communication with the crypto backend  |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Use Cases
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This chatbot can be customized for various crypto-related use cases:
+
+- Get live cryptocurrency price updates (e.g., Bitcoin, Ethereum).
+- Access FAQs about crypto trading, wallets, or technology.
+- Display cryptocurrency whitepapers or PDF documents for users.
+- Offer educational content about blockchain and crypto in an interactive conversation.
+
+---
+
+## Contributing
+
+Contributions are welcome! Feel free to fork this repository, make updates, and submit a pull request.
+
+If you encounter any issues or have feature requests, file an issue in this repository.
+
+---
+
+## Acknowledgments
+
+Special thanks to:
+
+- **Ant Design Team** for providing highly customizable UI components.
+- **Mozilla's PDF.js** for the PDF viewer.
+- The open-source community for making amazing libraries and frameworks available.
+- The cryptocurrency community for inspiring use cases and projects.
+
+---
+
+## Future Enhancements
+
+Potential ideas to extend the project's functionality:
+
+1. **Multi-Language Support**: Add NLP support for multiple languages.
+2. **Authentication**: Secure the chatbot with user logins for personalized responses.
+3. **Crypto Market Analytics**: Show advanced charts or real-time metrics for crypto prices.
+4. **Bot Training**: Integrate machine learning models for intelligent crypto-related query handling.
